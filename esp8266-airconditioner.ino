@@ -149,6 +149,11 @@ void setup() {
 	ac.begin();
 
 	delay(1000);
+	
+	WiFi.disconnect();
+	WiFi.softAPdisconnect(true);
+
+	delay(1000);
 
 	if (!SPIFFS.begin()) {
 		return;
